@@ -1,0 +1,22 @@
+@use "../../styles/colors";
+
+.title {
+    color: colors.$text_color_primary;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(45px + 2vmin);
+    line-height: 65px;
+    width: 300px;
+    text-align: left;
+}
+
+.title_container {
+    position: relative;
+    top: -1vmax;
+    left: 25%;
+}
+
+.span_title {
+    color: colors.$span_color;
+}
