@@ -1,6 +1,6 @@
-//import logo from "./logo.svg";
 // componets
 import Menu from "./components/menu/Menu";
+import Title from "./components/title/Title";
 
 // styles
 import "./App.css";
@@ -27,23 +27,13 @@ function App() {
         },
     ];
 
+    const mainTitle = "The fastest brunch delivery in";
+    const spanTitle = "Your city";
+
     return (
         <div className="App">
-            {/* <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Brunchy
-                </a>
-            </header> */}
             <Menu title={"BRUNCHY"} menu_items={menu_items} />
+            <Title mainTitle={mainTitle} spanTitle={spanTitle} />
         </div>
     );
 }

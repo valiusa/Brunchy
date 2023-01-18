@@ -1,7 +1,7 @@
 import * as React from "react";
 
 // mui componets
-import { Grid, Button, CardMedia } from "@mui/material";
+import { Grid, Button } from "@mui/material";
 
 // styles
 import classNames from "classnames";
