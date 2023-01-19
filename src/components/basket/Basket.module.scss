@@ -1,0 +1,41 @@
+@use "../../styles/colors";
+
+.basket_container {
+    position: relative;
+    left: 40%;
+    display: flex;
+    align-content: space-between;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #f9f6f6;
+    width: calc(480px + 2vmin);
+    height: 65px;
+}
+
+.basket_img {
+    margin: 14px 100px 0 20px;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.balance {
+    margin: 14px 100px 0 0;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: colors.$text_color_primary;
+}
+
+.order_btn {
+    margin: 10px 20px 10px 0 !important;
+    font-family: "Poppins" !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    line-height: 30px !important;
+    color: #ffffff !important;
+    background-color: colors.$background_color_secondary !important;
+    border-radius: 15px !important;
+}

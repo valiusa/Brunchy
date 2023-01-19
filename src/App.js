@@ -1,6 +1,7 @@
 // componets
 import Menu from "./components/menu/Menu";
 import Title from "./components/title/Title";
+import Basket from "./components/basket/Basket";
 import Carousel from "./components/carousel/Carousel";
 import CarouselItems from "./components/carouselItems/CarouselItems";
 
@@ -100,6 +101,7 @@ function App() {
                     <CarouselItems items={items} itemStyles={itemStyle} />
                 </Carousel>
             </div>
+            <Basket />
         </div>
     );
 }
