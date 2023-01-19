@@ -1,0 +1,71 @@
+@use "../../styles/colors";
+
+.item {
+    background: #f9f6f6;
+    border-radius: 30px;
+}
+
+.item img {
+    width: 170px;
+    height: 100px;
+}
+
+.item h1 {
+    font-size: calc(3px + 2vmin);
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    color: colors.$text_color_primary;
+}
+
+.item p {
+    font-family: "Poppins";
+    font-style: normal;
+    color: colors.$text_color_secondary;
+}
+
+.item span {
+    color: colors.$background_color_secondary !important;
+}
+
+.caption {
+    font-size: calc(8px + 1vmin);
+    font-weight: 600;
+}
+
+.price {
+    font-weight: 700;
+    font-size: calc(10px + 1vmin);
+    line-height: 20px;
+    color: colors.$text_color_primary !important;
+}
+
+.ci_img_container {
+    position: relative;
+    top: -10%;
+    left: 20%;
+}
+
+.ci_text_container {
+    position: relative;
+    top: -9%;
+    text-align: center;
+}
+
+.ci_button_img_contaainer {
+    position: relative;
+    left: 30%;
+}
+
+.ci_button_img {
+    width: 20px !important;
+    height: 20px !important;
+    cursor: pointer;
+}
+
+.item:first-child {
+    margin-right: 0px !important;
+}
+.item:last-child {
+    margin-left: 0px !important;
+}
