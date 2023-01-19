@@ -15,9 +15,12 @@ export default function Menu({ title = "", menu_items = [] }) {
                     <h1 className={classNames(styles.logo)}>{title}</h1>
                 </Grid>
                 {menu_items.map((item) => (
-                    <Grid item xs={1}>
+                    <Grid key={`g${item.id}`} item xs={1}>
                         {item.hasImg === false ? (
-                            <div className={styles.menu_buttons_container}>
+                            <div
+                                key={item.id}
+                                className={styles.menu_buttons_container}
+                            >
                                 <Button
                                     className={styles.menu_buttons}
                                     variant="contained"
@@ -29,6 +32,7 @@ export default function Menu({ title = "", menu_items = [] }) {
                             </div>
                         ) : (
                             <div
+                                key={item.id}
                                 className={
                                     (styles.delivery_guy_container,
                                     styles.menu_buttons_container)
