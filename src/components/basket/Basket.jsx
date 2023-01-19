@@ -15,7 +15,9 @@ export default function Basket() {
                 src="basket.svg"
                 className={classNames(styles.basket_img)}
             ></img>
-            <p className={classNames(styles.balance)}>0.00$</p>
+            <p id="balance" className={classNames(styles.balance)}>
+                0.00$
+            </p>
             <Button
                 variant="contained"
                 className={classNames(styles.order_btn)}

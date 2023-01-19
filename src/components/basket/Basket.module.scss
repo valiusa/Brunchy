@@ -33,7 +33,7 @@
     font-family: "Poppins" !important;
     font-style: normal !important;
     font-weight: 700 !important;
-    font-size: 20px !important;
+    font-size: calc(7px + 1vmin) !important;
     line-height: 30px !important;
     color: #ffffff !important;
     background-color: colors.$background_color_secondary !important;
