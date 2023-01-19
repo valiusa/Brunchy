@@ -11,7 +11,7 @@ export default function Menu({ title = "", menu_items = [] }) {
     return (
         <nav>
             <Grid container gridRow={1} gridColumn={menu_items.length}>
-                <Grid item xs={7}>
+                <Grid item xs={6}>
                     <h1 className={classNames(styles.logo)}>{title}</h1>
                 </Grid>
                 {menu_items.map((item) => (
@@ -40,7 +40,6 @@ export default function Menu({ title = "", menu_items = [] }) {
                                         styles.delivery_guy_button)
                                     }
                                     variant="contained"
-                                    href={item.link}
                                     target={"_blank"}
                                 >
                                     {item.name}
