@@ -27,7 +27,17 @@ export default function Basket() {
     const [openBalance, setOpenBalance] = React.useState(false);
     const [openSuccess, setOpenSuccess] = React.useState(false);
 
-    const handleOpenSuccess = () => setOpenSuccess(true);
+    const handleOpenSuccess = () => {
+        setOpenSuccess(true);
+
+        setTimeout(() => {
+            itemsInBasket.length = 0;
+            total.length = 0;
+
+            const balance = document.getElementById("balance");
+            balance.innerHTML = "0.00$";
+        }, 1000);
+    };
     const handleCloseSuccess = () => setOpenSuccess(false);
 
     const handleCloseModal = () => {
