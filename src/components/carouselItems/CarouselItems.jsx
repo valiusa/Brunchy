@@ -1,12 +1,13 @@
 import * as React from "react";
 
+// global vars
+import { itemsInBasket, total } from "../../../src/global_vars";
+
 // styles
 import classNames from "classnames";
 import styles from "./CarouselItems.module.scss";
 
 export default function CarouselItems({ items = [], itemStyles = {} }) {
-    let sum = 0;
-
     const handleBasketClick = (e) => {
         let priceId = e.target.id;
         priceId = priceId.replace("img", "price");
@@ -14,10 +15,29 @@ export default function CarouselItems({ items = [], itemStyles = {} }) {
         let price = document.getElementById(priceId).innerText;
         price = price.replace("$", "");
 
+        let nameId = e.target.id;
+        nameId = nameId.replace("img", "name");
+        let name = document.getElementById(nameId).innerText;
+
         let balance = document.getElementById("balance");
-        sum =
-            parseFloat(balance.innerText.replace("$", "")) + parseFloat(price);
-        balance.innerText = `${sum.toFixed(2)}$`;
+
+        total.length === 0
+            ? total.push(
+                  parseFloat(balance.innerText.replace("$", "")) +
+                      parseFloat(price)
+              )
+            : (total[0] =
+                  parseFloat(balance.innerText.replace("$", "")) +
+                  parseFloat(price));
+
+        itemsInBasket.push({
+            name: name,
+            price: price,
+            isProcessed: false,
+            quantity: 1,
+        });
+
+        balance.innerText = `${total[0].toFixed(2)}$`;
     };
 
     return items.map((item, id) => (
@@ -30,7 +50,7 @@ export default function CarouselItems({ items = [], itemStyles = {} }) {
                 <img alt="img" src={item.image}></img>
             </div>
             <div className={classNames(styles.ci_text_container)}>
-                <h1>{item.name}</h1>
+                <h1 id={`name${id}`}>{item.name}</h1>
                 <p className={classNames(styles.caption)}>{item.caption}</p>
                 <p id={`price${id}`} className={classNames(styles.price)}>
                     <span>$</span> {item.price.toFixed(2)}

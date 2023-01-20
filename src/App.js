@@ -89,13 +89,13 @@ function App() {
         margin: `0px ${setting.itemSideOffsets}px`,
     };
 
-    const mainTitle = "The fastest brunch delivery in";
-    const spanTitle = "Your city";
-
     return (
         <div className={classNames(styles.App)}>
             <Menu title={"BRUNCHY"} menu_items={menu_items} />
-            <Title mainTitle={mainTitle} spanTitle={spanTitle} />
+            <Title
+                mainTitle={"The fastest brunch delivery in"}
+                spanTitle={"Your city"}
+            />
             <div className={classNames(styles.carousel_container)}>
                 <Carousel _data={items} {...setting}>
                     <CarouselItems items={items} itemStyles={itemStyle} />
