@@ -1,2 +1,2 @@
-export const itemsInBasket = [];
-export const total = [];
+export let itemsInBasket = [];
+export let total = [];
