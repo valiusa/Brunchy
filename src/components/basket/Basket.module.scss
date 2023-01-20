@@ -14,8 +14,9 @@
 
 .basket_img {
     margin: 14px 100px 0 20px;
-    width: 40px !important;
-    height: 40px !important;
+    width: calc(20px + 2vmin) !important;
+    height: calc(20px + 2vmin) !important;
+    cursor: pointer;
 }
 
 .balance {
@@ -23,7 +24,7 @@
     font-family: "Poppins";
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: calc(5px + 2vmin);
     line-height: 36px;
     color: colors.$text_color_primary;
 }
@@ -38,4 +39,39 @@
     color: #ffffff !important;
     background-color: colors.$background_color_secondary !important;
     border-radius: 15px !important;
+}
+
+.balance_desc {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 65px;
+    color: colors.$text_color_primary;
+}
+
+.success_modal_container {
+    //display: flex !important;
+    //align-items: center;
+    //justify-content: center;
+    //text-align: center;
+    font-family: "Poppins";
+    font-style: normal;
+    color: colors.$text_color_primary;
+}
+
+.success_modal_container h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 65px;
+    color: colors.$background_color_secondary;
+}
+
+.success_modal_container p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 65px;
+    color: colors.$text_color_secondary;
 }
